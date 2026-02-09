@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Apresentação</title>
+    
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nantes: {
+                            primary: '#003366', // Deep Navy Blue
+                            accent: '#0066CC',  // Vibrant Blue
+                            highlight: '#00AEEF', // Cyan/Light Blue
+                        }
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        pulse: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.5' },
+                        }
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 0.5s ease-out forwards',
+                        slideUp: 'slideUp 0.5s ease-out forwards',
+                        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS for specific needs -->
+    <style>
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+    <div id="app" class="min-h-screen w-full">
+        <!-- Content will be injected here by script.js -->
+    </div>
+
+    <!-- Main Logic -->
+    <script src="script.js"></script>
+</body>
+</html>
